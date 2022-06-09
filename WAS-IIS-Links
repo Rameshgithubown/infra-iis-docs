@@ -1,0 +1,15 @@
+IIS:
+
+https://n001a700.cloud.icds.ibm.com:9446/ibm/iis/console/login
+
+WAS:
+
+https://n001a700.cloud.icds.ibm.com:9043/ibm/console/logon.jsp
+
+Solr Admin console: Health:
+
+http://n001a700.cloud.icds.ibm.com:58983/solr/#/
+
+LaunchPad:
+
+https://n001a700.cloud.icds.ibm.com:9446/ibm/iis/launchpad/

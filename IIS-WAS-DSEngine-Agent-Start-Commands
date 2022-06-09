@@ -1,0 +1,27 @@
+WAS:
+cd /opt/IBM/WebSphere/AppServer/profiles/InfoSphere/bin
+./startServer.sh server1
+
+Restart Agent:
+cd /opt/IBM/InformationServer/ASBN*/bin
+./NodeAgents.sh stop
+./NodeAgents.sh start
+
+Start DS Engine.
+cd /opt/IBM/InformationServer/Server/DSE*
+. ./dsenv
+bin/uv -admin -start
+
+Logs:
+(systemout.log)
+cd /opt/IBM/WebSphere/AppServer/profiles/InfoSphere/logs/server1/
+
+You can check datastage server version here: more /opt/IBM/InformationServer/Version.xml
+You can check datastage client version here: C:/IBM/InformationServer/Version.xml
+
+kafka, solr, zookeeper:
+/opt/IBM/InformationServer/Shared-Open-source/bin
+Linux services.
+kafka port - 59092 : solr port - 58983 : zookeeper port - 52181
+root@n001a699 [/opt/IBM/InformationServer/Clients/istools/cli]./istool.sh solr healthCheck -c dqecExceptionSets -u isadmin -p t3ndulkar@tendulkar
+[root@lin-rhl84-int-1 IBM]# find . -name log4j-*
